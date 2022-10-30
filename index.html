@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discover Books</title>
+    <link rel="shortcut icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created with HTML5, CSS3, and JavaScript. Select a book, count words and characters. Control font size and read."
+      data-react-helmet="true"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <script src="./js/books-data.js" defer></script>
+    <script src="./js/script.js" defer></script>
+  </head>
+  <body>
+    <div id="container">
+      <header id="head"><h1>DISCOVER BOOKS</h1></header>
+      <main id="main">
+        <section class="left-section">
+          <div class="wrapper select-book">
+            <span class="title-two"><h2>Select a Book</h2></span>
+          </div>
+          <div class="wrapper search">
+            <span class="title-two"><h2>Search Word</h2></span>
+            <div class="btn-wrapper">
+              <input type="text" placeholder="Search for..." id="searchVal"/>
+            <button class="clear">x</button>
+            <button class="search-btn">
+              <i class="bi bi-search"></i>
+            </button>
+            </div>
+          </div>
+
+          <div id="found-word">
+            <div class="stats"><span>Word</span><p> found</p><span>0</span><p>times</p></div>
+          </div>
+
+          <div class="wrapper book-stats">
+            <span class="title-two"><h2>Book Statistics</h2></span>
+            <p class="stats">Words found: 0</p>
+            <p class="stats">Characters (No spaces): 0</p>
+            <p class="stats">Characters (With spaces): 0</p>
+          </div>
+        </section>
+        <section class="middle-section">
+          <div class="wrapper most-used">
+            <span class="title-two"><h2>10 Most Used Words</h2></span>
+            <article class="most-used-words"></article>
+          </div>
+          <div class="wrapper least-used-">
+            <span class="title-two"><h2>10 Least Used Words</h2></span>
+            <article class="least-used-words"></article>
+          </div>
+        </section>
+
+        <section class="right-section">
+          <div class="book-cont">
+            <div class="book-title"><h1>Title of the Book</h1></div>
+            <div class="font-menu"><p>Font Menu</p></div>
+            <div class="btn-cont" id="hidden">
+              <button class="font-type" title="Change Font Type">
+                <img id="font-svg" src="./images/Serif.svg" alt="Serif Font Icon" width="27px" class="serif">
+              </button>
+              </button>
+              <button
+                class="fontSize-decrement"
+                title="Decrease Font Size. Min Value 12px"
+              >
+                <i class="bi bi-dash-lg"></i>
+              </button>
+              <span class="font-size">16px</span>
+              <button
+                class="fontSize-increment"
+                title="Increase Font Size. Max Value 20px"
+              >
+                <i class="bi bi-plus-lg"></i>
+              </button>
+              <i class="bi bi-x-circle-fill" id="close"></i>
+            </div>
+            <div class="book-content">
+              <span>Choose a book from <strong>Select a Book</strong> section.</span>
+            </div>
+            <div class="book-footer"></div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
